@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Narrative Visualization </title>
+    <meta name="author" content="Hilda Liu">
+    <meta name="description" content="">
+    <link rel="stylesheet" href="styles/index.css">
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+</head>
+<body>
+    <h1>Cars MPG Observation by Fuel and Cylinder</h1>
+    <h3>This is an interactive narrative visualization using D3.js to analyze automobile data from 2017. 
+        It features different scenes, including a scatter plot and a bar chart, 
+        to compare metrics like city and highway MPG, 
+        visually representing these comparisons and trends through user-driven interactions. 
+        The visualization is enhanced with dynamic elements such as tooltips and sorting functionalities, 
+        allowing users to explore in-depth data based on vehicle attributes like engine cylinders and fuel type.</h3>
+
+    <div id="scatter-description" style="width: 960px; margin: 20px auto; padding: 10px; text-align: justify; display: none;">
+            <p>The scatterplot chart illustrates the relationship between Average Highway MPG (X-axis) and Average City MPG (Y-axis), 
+                using circles to represent data points where the size indicates the number of Engine Cylinders. 
+                It shows a positive correlation, indicating that vehicles with higher city MPG often also achieve higher highway MPG. 
+                The data points cluster in patterns that reflect distinct groups by cylinder count.</p>
+    </div>
+    <nav>
+        <button id="prevBtn">Previous</button>
+        <button id="nextBtn">Next</button>
+    </nav>
+    <div id="chart"></div>
+    
+</body>
+
+<!--Footer-->
+<div>
+    <h5>Car MPG Narrative Visualization by Hilda Liu.</h5>
+</div>
+<script src="scripts/script.js"></script>
+<div id="tooltip" style="opacity: 0; position: absolute; background: white; border: 1px solid black; padding: 5px; pointer-events: none;"></div>
+</html>
